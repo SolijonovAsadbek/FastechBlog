@@ -23,6 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-1&2y$s@j3@r2gp-jj9qa(p*$v2iv&zxahy2$41w-!!lg7f=2x)')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 HOSTS = os.environ.get('ALLOWED_HOSTS')
@@ -122,7 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR / 'static')
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'blog_app/static']
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
