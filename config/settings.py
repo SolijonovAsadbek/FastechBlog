@@ -85,7 +85,6 @@ DATABASES = {
     }
 }
 
-
 url = 'postgres://postgresdb_9pa0_user:pRTH5DkXavrlItd6JMxXFDhYdKrrtu1J@dpg-cnomggn79t8c73bmq4v0-a.oregon-postgres.render.com/postgresdb_9pa0'
 db_url = os.environ.get('DATABASE_URL', url)
 DATABASES['default'] = dj_database_url.parse(db_url)
@@ -123,8 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR / 'static')
-STATICFILES_DIRS = [BASE_DIR / 'blog_app/static']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
